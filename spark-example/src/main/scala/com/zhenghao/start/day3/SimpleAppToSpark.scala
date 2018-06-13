@@ -7,7 +7,8 @@ import org.apache.spark.sql.SparkSession
 // 创建空的，依赖要不要添加进去，服务器是有的
 // 代码里设置jar包、master
 // 注意：本地的scala、spark版本要和服务器的一致
-//
+// deployMode默认是client，driver运行在本机，结果都返回本机，
+// -Dspark.submit.deployMode=cluster
 
 object SimpleAppToSpark {
 
@@ -22,12 +23,12 @@ object SimpleAppToSpark {
 //    spark.sparkContext.getConf.setJars(List("/Users/zhenghao/Documents/Workspace/IDEA/SparkDemoSBT/out/artifacts/spark_example/spark-example.jar"))
 
 
-//    val textFile = spark.read.textFile(inputFile).cache()
-//    val numAs = textFile.filter(line => line.contains("a")).count()
-//    val numBs = textFile.filter(line => line.contains("b")).count()
-//    println(f"Lines with a: $numAs, Lines with b: $numBs")
+    val textFile = spark.read.textFile(inputFile).cache()
+    val numAs = textFile.filter(line => line.contains("a")).count()
+    val numBs = textFile.filter(line => line.contains("b")).count()
+    println(f"Lines with a: $numAs, Lines with b: $numBs")
 
-    print("submit to spark from IDEA")
+//    print("submit to spark from IDEA")
     spark.stop()
   }
 
