@@ -1,4 +1,4 @@
-package com.zhenghao.start.day4
+package com.zhenghao.spark.day4
 
 import org.apache.spark.{SparkConf, SparkContext}
 

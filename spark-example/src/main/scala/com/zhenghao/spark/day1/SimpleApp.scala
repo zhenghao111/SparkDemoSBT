@@ -1,4 +1,4 @@
-package com.zhenghao.start.day1
+package com.zhenghao.spark.day1
 
 import org.apache.spark.sql.SparkSession
 

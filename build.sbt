@@ -8,5 +8,6 @@ libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-core_2.11" % "2.2.1",
   "org.apache.spark" % "spark-sql_2.11" % "2.2.1",
   "org.apache.spark" % "spark-streaming_2.11" % "2.2.1",
-  "org.apache.spark" % "spark-hive_2.11" % "2.2.1"
+  "org.apache.spark" % "spark-hive_2.11" % "2.2.1",
+  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 )

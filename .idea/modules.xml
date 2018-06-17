@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spark-example/spark-example.iml" filepath="$PROJECT_DIR$/spark-example/spark-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/spark-project1/spark-project1.iml" filepath="$PROJECT_DIR$/spark-project1/spark-project1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark-scala/spark-scala.iml" filepath="$PROJECT_DIR$/spark-scala/spark-scala.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkdemosbt.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkdemosbt.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkdemosbt-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkdemosbt-build.iml" />
     </modules>
