@@ -13,7 +13,9 @@ import org.apache.spark.sql.SparkSession
 object SimpleAppToSpark {
 
   def main(args: Array[String]): Unit = {
-    val inputFile = "/home/zhenghao/deployment/data/README.md" // 文件是？？
+    // 1. 文件先放在各个节点可以访问的文件系统上，集群本地、HDFS、网络文件系统
+    // 2. Driver程序中读取本地文件，分发到各个节点
+    val inputFile = "/Users/zhenghao/Documents/Workspace/IDEA/SparkDemoSBT/data/README.md" // 文件是？？
     val spark = SparkSession
       .builder
       .appName("Simple Application To Spark")
@@ -24,6 +26,7 @@ object SimpleAppToSpark {
 
 
     val textFile = spark.read.textFile(inputFile).cache()
+
     val numAs = textFile.filter(line => line.contains("a")).count()
     val numBs = textFile.filter(line => line.contains("b")).count()
     println(f"Lines with a: $numAs, Lines with b: $numBs")
